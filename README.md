@@ -113,8 +113,8 @@ Create a `.env` file in the root directory:
 
 ```env
 VITE_CONVEX_URL=https://your-deployment-url.convex.cloud
-VITE_ADMIN_USERNAME=admin
-VITE_ADMIN_PASSWORD=YourSecurePassword123!
+VITE_ADMIN_USERNAME=adminName
+VITE_ADMIN_PASSWORD=123!
 ```
 
 Replace `your-deployment-url` with the URL provided by Convex.
@@ -244,79 +244,11 @@ Dr,Michael,Peter,Johnson,Male
 - **Pagination**: Large datasets handled efficiently
 - **Responsive Design**: Optimized for all screen sizes
 
-## Production Deployment
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-### Deploy Convex Backend
-
-```bash
-npx convex deploy
-```
-
-Update your production `.env` with the production Convex URL.
-
-### Deploy Frontend
-
-Deploy the `dist` folder to your hosting provider:
-- Vercel
-- Netlify
-- AWS S3 + CloudFront
-- Any static hosting service
-
-### Environment Variables for Production
-
-Ensure these are set in your hosting platform:
-```
-VITE_CONVEX_URL=https://your-production-url.convex.cloud
-VITE_ADMIN_USERNAME=admin
-VITE_ADMIN_PASSWORD=SecureProductionPassword!
-```
-
-## Troubleshooting
-
-### Convex Connection Issues
-- Ensure `npx convex dev` is running
-- Check that VITE_CONVEX_URL matches your Convex dashboard
-- Clear browser cache and restart dev server
-
-### Voting Not Enabled
-- Check Settings page for requirements
-- Ensure at least 1 voter and 1 candidate are added
-- Verify voting status is enabled
-
-### CSV Import Fails
-- Check CSV format matches template exactly
-- Ensure no special characters in names
-- Verify all required fields are filled
-
-## Customization
-
-### Colors
-Edit `tailwind.config.js` to change the color scheme:
-```javascript
-colors: {
-  primary: { DEFAULT: '#1E40AF' },    // Deep blue
-  secondary: { DEFAULT: '#DC2626' },  // Bold red
-  neutral: { DEFAULT: '#64748B' },    // Slate gray
-}
-```
-
 ### Election Title
-Change via Settings page in admin dashboard or directly in database.
+Change via Settings page in admin dashboard.
 
 ### Maximum Candidates
 Adjust via Settings page (default: 20 per position, max: 50).
-
-## Support and Documentation
-
-- **Convex Docs**: https://docs.convex.dev/
-- **React Docs**: https://react.dev/
-- **Tailwind Docs**: https://tailwindcss.com/docs
 
 ## License
 
