@@ -28,6 +28,7 @@ dist-ssr
 # Convex generated files
 .convex/
 convex/_generated/
+convex
 
 # Editor directories and files
 .vscode/*
